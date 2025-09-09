@@ -113,6 +113,7 @@ export default {
         const filteredHeaders = filterHeaders(request.headers);
 
         // default request is always unsigned, with headers filtered
+        console.log(JSON.stringify(url))
         let requestToSend = new Request(url, {
             method: request.method,
             headers: filteredHeaders,
