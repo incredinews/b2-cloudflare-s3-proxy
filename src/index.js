@@ -89,7 +89,7 @@ export default {
         const url = new URL(request.url);
         url.protocol = "https:";
         //url.hostname = (url.hostname.startsWith(`${AWS_S3_BUCKET}.`) ? `${AWS_S3_BUCKET}.${AWS_S3_ENDPOINT}` : AWS_S3_ENDPOINT);
-        url.hostname = AWS_S3_ENDPOINT);
+        url.hostname = AWS_S3_ENDPOINT;
         url.port = "443";
 
         const alwaysValidate = (env["ALLOW_UNAUTHENTICATED_PULLS"] !== "true");
