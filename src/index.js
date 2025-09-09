@@ -118,7 +118,7 @@ export default {
             headers: filteredHeaders,
             body: request.body,
         });
-
+        console.log(JSON.stringify(requestToSend))
         if (signUpstreamRequestEvenOnUnauthenticatedPulls) {
             // Sign the new request
             const signedRequest = await aws.sign(url, {
